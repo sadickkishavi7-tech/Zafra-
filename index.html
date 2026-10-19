@@ -102,5 +102,46 @@
     </div>
   </main>
 </body>
-</html>
-<!-- ZAFRA AI itaongezwa hapa -->
+</html> 
+
+<section class="section" id="zafra-ai">
+  <h2>🤖 ZAFRA AI</h2>
+  <p>Msaidizi wako wa biashara Afrika.</p>
+
+  <div id="ai-jibu">
+    Karibu! Mimi ni msaidizi wa ZAFRA.
+    Unatafuta bidhaa au unahitaji msaada wa biashara?
+  </div>
+
+  <input
+    type="text"
+    id="ai-swali"
+    placeholder="Andika swali lako hapa..."
+  >
+
+  <button onclick="zungumzaNaZafra()">
+    Tuma swali
+  </button>
+</section>
+
+<script>
+function zungumzaNaZafra() {
+  const swali = document.getElementById("ai-swali").value
+    .toLowerCase().trim();
+
+  const jibu = document.getElementById("ai-jibu");
+
+  if (swali === "") {
+    jibu.textContent = "Tafadhali andika swali lako.";
+  } else if (swali.includes("bidhaa")) {
+    jibu.textContent =
+      "Karibu ZAFRA! Tafuta bidhaa unayohitaji au wasiliana na mfanyabiashara.";
+  } else if (swali.includes("biashara")) {
+    jibu.textContent =
+      "ZAFRA inakusaidia kuunganisha biashara na wateja. Tunaweza kuongeza huduma za wafanyabiashara hatua kwa hatua.";
+  } else {
+    jibu.textContent =
+      "Asante kwa kuuliza! ZAFRA AI ya sasa ni ya majaribio. Kuunganisha AI halisi kutahitaji huduma ya AI na seva.";
+  }
+}
+</script>
